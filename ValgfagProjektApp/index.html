@@ -14,20 +14,105 @@
   
   <!-- Latest compiled JavaScript -->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <script src="main.js"></script>
     
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
-    <h1>My First Bootstrap Page</h1>
-    <p>This is some text.</p> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Trænings App</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">Vælg Redskaber</a></li>
+          <li><a href="#section2">Vælg Muskelgrupper</a></li>
+          <li><a href="#section3">Beregn Øvelser</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  
-  <div class="alert alert-success">
-  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  <strong>Success!</strong> Indicates a successful or positive action.
+</nav>    
+
+<div id="section1" class="container-fluid">
+  <h1>Vælg Redskaber</h1>
+  <form id="f1" role="form">
+    <div class="form-group">
+      <label for="sel2">Vælg</label>
+      <select multiple class="form-control" id="sel1">
+        <option>Håndvægt</option>
+        <option>Reb</option>
+      </select>
+    </div>
+  </form>
+  <ul class="pager">
+    <li><a href="#section2">Næste</a></li>
+  </ul>
 </div>
-  <script src="main.js"></script>
+
+<div id="section2" class="container-fluid">
+  <h1>Vælg Muskelgrupper</h1>
+   <form id="f2" role="form">
+    <div class="form-group">
+      <label for="sel2">Vælg</label>
+      <select multiple class="form-control" id="sel2">
+        <option>Ryg</option>
+        <option>Biceps</option>
+        <option>Triceps</option>
+      </select>
+    </div>
+  </form>
+  <ul class="pager">
+    <li><a href="#section1">Sidste</a></li>
+    <li><a href="#section3">Næste</a></li>
+  </ul>
+</div>
+ 
+<div id="section3" class="container-fluid">
+  <h1>Beregn Øvelser</h1>
+  <button type="button" id="myButton" class="btn btn-primary" onclick="myFunction()">Beregn</button>
+  <p id="demo"></p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Redskab</th>
+        <th>Muskelgruppe</th>
+        <th>Resultat</th>
+      </tr>
+    </thead>
+    <tbody id="myOutput">
+      
+    </tbody>
+  </table>
+  <ul class="pager">
+    <li><a href="#section2">Sidste</a></li>
+  </ul>
+</div>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
